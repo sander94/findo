@@ -2,32 +2,30 @@
 
 @section('content')
     <div class="hero-area js-hero-slides">
-      <div class="hero-area__content-slides js-hero-height"><a class="hero-slider-arrow hero-slider-arrow--left js-change-hero-slide js-left" href="#"></a><a class="hero-slider-arrow hero-slider-arrow--right js-change-hero-slide js-right" href="#"></a>
+     <div class="hero-area__content-slides js-hero-height"><a class="hero-slider-arrow hero-slider-arrow--left js-change-hero-slide js-left" href="#"></a><a class="hero-slider-arrow hero-slider-arrow--right js-change-hero-slide js-right" href="#"></a>
+       
+     <?php $counter = 1;  ?>
+      
+      @foreach($promoevents as $promoevent)
+
+       
         <div class="hero-area__each-content-slide js-hero-slide js-active-slide" style="background-image:url(
-        {{ asset('images/temp/slider/cover_olearys.jpg') }} );" id="js-slide-1">
+        {{ asset('images/events/sliders/'.$promoevent->slider_image.'') }} );" id="js-slide-{{ $counter }}">
           <div class="hero-area__outer-content-align">
-            <div class="hero-area__banner-logo"><img src="{{ asset('images/temp/slider/logos/logo-olearys.svg') }}"></div>
-            <div class="hero-area__content js-hero-content"><a href="event.html">
-                <h1>Esimene üritus</h1></a></div>
+           <!-- <div class="hero-area__banner-logo"><img src="{{ asset('images/temp/slider/logos/logo-olearys.svg') }}"></div> -->
+            <div class="hero-area__content js-hero-content"><a href="event/{{ $promoevent->id }}">
+                <h1>{{ $promoevent->title }}</h1></a></div>
           </div>
         </div>
-        <div class="hero-area__each-content-slide js-hero-slide" style="
-        background-image:url(
-        {{ asset('images/temp/slider/cover_redbull.jpg') }} 
-        )" id="js-slide-2">
-          <div class="hero-area__outer-content-align">
-            <div class="hero-area__banner-logo"><img src="gfx/temp/slider/logos/red-bull-kart-fight.png"></div>
-            <div class="hero-area__content js-hero-content"><a href="event.html">
-                <h1>Teine üritus</h1></a></div>
-          </div>
-        </div>
-        <div class="hero-area__each-content-slide js-hero-slide" style="background-image:url( {{ asset('images/temp/slider/cover_weekendbaltic.jpg') }} )" id="js-slide-3">
-          <div class="hero-area__outer-content-align">
-            <div class="hero-area__banner-logo"><img src="{{ asset('images/temp/slider/logos/wknd_logo.svg') }}"></div>
-            <div class="hero-area__content js-hero-content"><a href="event.html">
-                <h1>Kolmas üritus</h1></a></div>
-          </div>
-        </div>
+
+        <?php $counter++; ?>
+
+      @endforeach
+
+
+
+
+
       </div>
     </div>
     <!--
@@ -145,9 +143,11 @@
         </div>
       </div>
 
+
+ <div class="event-list__events">
       @foreach($events as $event)
 
-      <div class="event-list__events">
+     
         <div class="event-list__each-event"><a class="event-content" href="./event/{{ $event->id }}">
             <div class="event-date">{{ explode(".", $event->date)[0] }}</div>
             <div class="event-image" style="background-image: url({{ asset('images/events/thumb/'.$event->image.'') }} );"></div>
@@ -165,9 +165,9 @@
             </div>
           </div>
         </div>
-      </div>
+      
       @endforeach
-       
+    </div>   
 
       
     </div>

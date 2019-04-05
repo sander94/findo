@@ -14,6 +14,18 @@
                 	<form action="{{ route('events.update', $event->id) }}" method=post autocomplete="off" enctype="multipart/form-data">
                 		@csrf
                         @method('PUT')
+
+
+                        <div class="form-group row" style="border: 1px solid #dadada; height: 200px; padding-top: 80px; background-image: url({{ asset('images/events/sliders/'.$event->slider_image.'') }}); background-size: cover;">
+                            <label for="slider_image" class="col-md-4 col-form-label text-md-right">Slaideri pilt</label>
+                            <div class="col-md-6">
+                                <input id="slider_image" type="file" class="form-control" name="slider_image" style="border: 0; background: none;">
+                            </div>
+                        </div>
+
+
+
+
                 	  	<div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Ürituse nimi</label>
                             <div class="col-md-6">

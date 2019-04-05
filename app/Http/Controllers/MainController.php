@@ -10,7 +10,8 @@ class MainController extends Controller
    	public function index()
     {
     	$events = Events::all();
-        return view('frontpage', compact('events', $events));
+        $promoevents = Events::all()->where('is_promoted', '1');
+        return view('frontpage', compact('events', $events), compact('promoevents', $promoevents));
     }
 
 

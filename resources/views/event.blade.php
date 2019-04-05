@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('content')
-<a class="navigate-back" href="index.html"> <span>Back to frontpage</span></a>
+<a class="navigate-back" href="/"> <span>Tagasi avalehele</span></a>
     <article class="content-area content-area--event-details has-media">
       <div class="event-details__content-block event-details__intro-content">
         <div class="event-details__intro-content__image" style="
-        background-image: url(        {{ asset('images/events/thumb/'.$event->image.'') }}            );"></div>
+        background-image: url(        {{ asset('images/events/thumb/'.$event->image.'') }}          );"></div>
         <div class="event-details__intro-content__text">
           <h1>{{ $event->title }}</h1>
           <div class="time">{{ $event->date }}, kell {{ $event->time }}</div>

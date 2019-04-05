@@ -80,7 +80,7 @@ class AdminPromoEventsController extends Controller
     public function update(Request $request, $id)
     {
         Events::find($id)->update($request->all());
-        return redirect()->route('events.indexPromoEvent');
+        return redirect()->route('admin.events.indexPromoEvent');
     }
 
     /**
