@@ -1578,3 +1578,54 @@ p.ticket-price {
       color: #ff0000; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.monthselect, .regionselect {
+  background-color: none;
+  padding: 15px 15px;
+  transition: all 0.2s ease-in;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 9px;
+  font-size: 1rem;
+  line-height: 4rem;
+}
+.monthselect:hover, .regionselect:hover {
+  background-color: rgba(51, 54, 66, 0.5);
+  color: red;
+}
+input[type="radio"].month, input[type="radio"].region {
+display: none;
+}
+input[type="radio"]:checked + label, input[type="radio"]:checked + label {
+  background-color: red;
+  color: white;
+}
+
+.find-btn {
+  background-color: red;
+  color: #FFF;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 9px;
+  font-size: 1rem;
+}
+
+.find-btn:hover {
+  background-color: white;
+  color: red;
+}

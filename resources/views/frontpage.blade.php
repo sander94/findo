@@ -28,120 +28,81 @@
 
       </div>
     </div>
-    <!--
-    <div class="content-slider js-slider content-slider--event-slider">
-      <h3>Põnevad tegevused</h3>
-      <div class="arrow-left js-slider-arrow js-left"><span></span></div>
-      <div class="arrow-right js-slider-arrow js-right"><span></span></div>
-      <div class="sliding-overflow js-sliding-block"><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/1.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>Estonian Voices Luke mõisa suvekontserdid</h3>
-            <p class="location">Luke Mõisapark, Tartumaa</p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/2.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>John Murrell Sarah Bernhardti viimane suvi</h3>
-            <p class="location">Rehe küün, Üksnurme küla</p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/3.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>PET SHOP BOYS / Õllesummer Festival 2018</h3>
-            <p class="location">Tallinna lauluväljak, Eesti </p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/4.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>Elektroonilise muusika ja visuaalse kunsti festival Moonland</h3>
-            <p class="location">Rummu, Vasalemma vald, Eesti</p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/5.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>Estonian Voices Luke mõisa suvekontserdid</h3>
-            <p class="location">Luke Mõisapark, Tartumaa</p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/6.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>John Murrell Sarah Bernhardti viimane suvi</h3>
-            <p class="location">Rehe küün, Üksnurme küla</p>
-          </div></a><a class="js-slider-item small-event-teaser undefined" href="#" title="undefined">
-          <div class="small-event-teaser__image" style="background-image: url({{ asset('images/temp/thumbnails/7.png') }} );">
-            <div class="image-mask"></div>
-          </div>
-          <div class="small-event-teaser__content">
-            <h3>PET SHOP BOYS / Õllesummer Festival 2018</h3>
-            <p class="location">Tallinna lauluväljak, Eesti </p>
-          </div></a>
-      </div>
-    </div>
-  -->
+
+  <form action="" method="get">
     <div class="event-list">
-      <div class="event-list__filter">
+
+
+
+
+<script>
+
+$(document).ready(function(){
+    $('input:radio[name="month"]').change(function() {
+        // alert
+        $('#currentMonth').html($(this).attr('id'));;
+    });
+
+        $('input:radio[name="region"]').change(function() {
+        // alert
+        $('#currentRegion').html($(this).attr('id'));;
+    });
+});
+
+</script>
+
+
+    <div class="event-list__filter">
         <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
-          <div class="selectbox__label js-slide-toggle">Juuni</div>
+          <div class="selectbox__label js-slide-toggle" id="currentMonth">Vali kuu</div>
           <div class="selectbox__content js-toggled-item js-multiselect">
-            <div class="selectbox__option js-multiselect-option">Jaanuar</div>
-            <div class="selectbox__option js-multiselect-option">Veebruar</div>
-            <div class="selectbox__option js-multiselect-option">Märts</div>
-            <div class="selectbox__option js-multiselect-option">Aprill</div>
-            <div class="selectbox__option js-multiselect-option">Mai</div>
-            <div class="selectbox__option js-multiselect-option">Juuni</div>
-            <div class="selectbox__option js-multiselect-option">Juuli</div>
-            <div class="selectbox__option js-multiselect-option">August</div>
-            <div class="selectbox__option js-multiselect-option">September</div>
-            <div class="selectbox__option js-multiselect-option">Oktoober</div>
-            <div class="selectbox__option js-multiselect-option">November</div>
-            <div class="selectbox__option js-multiselect-option">Detsember</div>
-            <div class="multiselect-buttons">
-              <div class="toggle-selections js-select-all">Vali kõik</div>
-              <div class="toggle-selections js-deselect">Tühjenda valikud</div>
-              <div class="btn solid colored small save-btn js-save">Salvesta valikud</div>
-            </div>
+            <input type="radio" name="month" class="month" value="01" id="Jaanuar"><label class="monthselect" for="Jaanuar"> Jaanuar</label>
+            <input type="radio" name="month" class="month" value="02" id="Veebruar"><label class="monthselect" for="Veebruar"> Veebruar</label>
+            <input type="radio" name="month" class="month" value="03" id="Märts"><label class="monthselect" for="Märts"> Märts</label>
+            <input type="radio" name="month" class="month" value="04" id="Aprill"><label class="monthselect" for="Aprill"> Aprill</label>
+            <input type="radio" name="month" class="month" value="05" id="Mai"><label class="monthselect" for="Mai"> Mai</label>
+            <input type="radio" name="month" class="month" value="06" id="Juuni"><label class="monthselect" for="Juuni"> Juuni</label>
+            <input type="radio" name="month" class="month" value="07" id="Juuli"><label class="monthselect" for="Juuli"> Juuli</label>
+            <input type="radio" name="month" class="month" value="08" id="August"><label class="monthselect" for="August"> August</label>
+            <input type="radio" name="month" class="month" value="09" id="September"><label class="monthselect" for="September"> September</label>
+            <input type="radio" name="month" class="month" value="10" id="Oktoober"><label class="monthselect" for="Oktoober"> Oktoober</label>
+            <input type="radio" name="month" class="month" value="11" id="November"><label class="monthselect" for="November"> November</label>
+            <input type="radio" name="month" class="month" value="12" id="Detsember"><label class="monthselect" for="Detsember"> Detsember</label>
+
+
+
+
+
           </div>
         </div>
+
+
+<!-- TOGGLE WRAP -->
         <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
-          <div class="selectbox__label js-slide-toggle">Kõik märksõnad</div>
+                  <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
+          <div class="selectbox__label js-slide-toggle" id="currentRegion"> {{ $currentRegion }} </div>
           <div class="selectbox__content js-toggled-item js-multiselect">
-            <div class="selectbox__option js-multiselect-option">Muusika</div>
-            <div class="selectbox__option js-multiselect-option">Sport</div>
-            <div class="selectbox__option js-multiselect-option">Toit</div>
-            <div class="selectbox__option js-multiselect-option">Komöödia</div>
-            <div class="selectbox__option js-multiselect-option">Teater</div>
-            <div class="selectbox__option js-multiselect-option">Film</div>
-            <div class="selectbox__option js-multiselect-option">Kunst</div>
-            <div class="selectbox__option js-multiselect-option">Käsitöö</div>
-            <div class="selectbox__option js-multiselect-option">Tants</div>
-            <div class="selectbox__option js-multiselect-option">Muusika</div>
-            <div class="selectbox__option js-multiselect-option">Film</div>
-            <div class="selectbox__option js-multiselect-option">Teater</div>
-            <div class="selectbox__option js-multiselect-option">Kirjandus</div>
-            <div class="selectbox__option js-multiselect-option">Sport</div>
-            <div class="selectbox__option js-multiselect-option">Fitness</div>
-            <div class="selectbox__option js-multiselect-option">Tervis</div>
-            <div class="selectbox__option js-multiselect-option">Toit</div>
-            <div class="selectbox__option js-multiselect-option">Komöödia</div>
-            <div class="selectbox__option js-multiselect-option">Networking</div>
-            <div class="selectbox__option js-multiselect-option">Mäng</div>
-            <div class="selectbox__option js-multiselect-option">Ajakirjandus</div>
-            <div class="multiselect-buttons">
-              <div class="toggle-selections js-select-all">Vali kõik</div>
-              <div class="toggle-selections js-deselect">Tühjenda valikud</div>
-              <div class="btn solid colored small save-btn js-save">Salvesta valikud</div>
-            </div>
+
+          @foreach($regionals as $key)
+           <input type="radio" name="region" class="region" value="{{ $key->id }}" id="{{ $key->region }}" <?php if(isset($_GET['region'])) { if($_GET['region'] == $key->id ) { echo "checked"; } } ?> >
+           <label class="regionselect" for="{{ $key->region }}"> {{ $key->region }} </label>
+          @endforeach
+
+   
+
+
+
+
           </div>
         </div>
+
+        </div>
+<!-- TOGGLE WRAP END -->
+
+      <button class="find-btn">Leia</button>
+
       </div>
+
 
 
  <div class="event-list__events">
@@ -170,5 +131,5 @@
     </div>   
 
       
-    </div>
+    </div></form>
 @endsection

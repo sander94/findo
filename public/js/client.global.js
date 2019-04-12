@@ -17,7 +17,7 @@ $(function(){
 
 	// prevent closing the element itself when clicked
 	$('.js-toggle-wrap').on('click', function(ev){
-		ev.preventDefault();
+	//	ev.preventDefault();
 		ev.stopPropagation();
 	});
 
@@ -30,8 +30,8 @@ $(function(){
 	// toggle the slideDown of dropdown boxes
 	$('.js-slide-toggle').on('click', function(ev){
 
-		ev.preventDefault();
-		ev.stopPropagation();
+		// ev.preventDefault();
+		// ev.stopPropagation();
 
 		var $this = $(this);
 

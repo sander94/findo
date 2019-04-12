@@ -32,7 +32,7 @@
       <div class="event-details__content-block">
         <h3>Hinnainfo</h3>
         <p class="ticket-price">Pilet: {{ $event->ticket_price }} €</p>
-        <p>{{ $event->additional_info }}</p>
+        <p>{!! nl2br($event->additional_info) !!}</p>
       </div>
       <div class="event-details__content-block">
         <h3>Korraldaja:</h3>
