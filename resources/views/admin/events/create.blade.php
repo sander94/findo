@@ -29,12 +29,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
-                            <label for="title" class="col-md-4 col-form-label text-md-right">Avalikusta kohe?</label>
-                            <div class="col-md-6">
-                                <input type="checkbox" value="1" name="is_active">
-                            </div>
-                        </div>
+
 
                 	  	<div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Ürituse nimi</label>
@@ -46,7 +41,7 @@
                 	  	<div class="form-group row">
                             <label for="description" class="col-md-4 col-form-label text-md-right">Kirjeldus</label>
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control" name="description"></textarea>
+                                <textarea id="description" class="form-control" name="description" style="height: 400px;"></textarea>
                             </div>
                         </div>
 
@@ -122,7 +117,12 @@
                                 <input id="image" type="file" class="form-control" name="image" style="border: 0;">
                             </div>
                         </div>
-
+                        <div class="form-group row">
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Avalikusta kohe?</label>
+                            <div class="col-md-6">
+                                <input type="checkbox" value="1" name="is_active">
+                            </div>
+                        </div>
 
 						<div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right"></label>

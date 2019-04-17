@@ -18,7 +18,7 @@ if(!empty($request->region)) {
 $currentRegion = Regions::where('id', $request->region)->first();
 $currentRegion = $currentRegion->region;
 }
-else { $currentRegion = "Vali asukoht"; }
+else { $currentRegion = "Asukoht"; }
 
 
 if(!empty($request->month)) {

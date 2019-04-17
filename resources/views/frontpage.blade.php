@@ -118,9 +118,10 @@ $(document).ready(function(){
 
 
 
+<div class="selectbox selectbox-default selectbox-large js-toggle-wrap">
 
-
-      <button class="find-btn">Leia</button>
+      <button class="find-btn" style="">Leia</button>
+</div>
 
   </div>
 
@@ -140,7 +141,7 @@ $(document).ready(function(){
           <div class="event-share js-toggle-wrap">
             <div class="event-share__dropdown js-slide-toggle">
               <ul class="social-share js-toggled-item align-right">
-                <li class="facebook"><a href="#">Facebook</a></li>
+                <li class="facebook"><a href="https://facebook.com/sharer/sharer.php?u=https://findo.ee/event/{{ $event->id }}">Facebook</a></li>
                 <li class="twitter"><a href="#">Twitter</a></li>
                 <li class="email"><a href="#">E-mail</a></li>
               </ul>
