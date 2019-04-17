@@ -49,7 +49,7 @@
 
 					@foreach($events as $event)
 						<tr style="border-top: 1px solid #eaeaea;">
-                            <td class="text-center">
+                            <td class="text-center regular">
                                 
                                     @if($event->is_promoted == '1')
                                         <i class="fas fa-star" style="color: gold;"> </i>
@@ -57,7 +57,7 @@
                                 
                             </td>
 
-                            <td class="text-center">
+                            <td class="text-center regular">
                                 
                                     @if($event->is_active == '1')
                                         <i class="fas fa-check" style="color: green;"> </i>
