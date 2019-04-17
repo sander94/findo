@@ -765,7 +765,7 @@ h1 {
   color: #000;
   position: fixed;
   z-index: 1100;
-  width: 1000px;
+  width: 600px;
   height: 50px;
   left: 50%;
   top: 10px;
@@ -795,7 +795,7 @@ h1 {
       background-size: 20px auto; }
   @media only screen and (max-width: 1100px) {
     .site-search {
-      width: calc(100% - 6vw);
+      width: calc(80%);
       margin-left: auto;
       margin-right: auto; } }
   .site-search__dropdown, .site-search__searchfield {
@@ -814,7 +814,7 @@ h1 {
       .site-search__dropdown {
         width: 120px; } }
   .site-search__searchfield {
-    width: calc(100% - 260px);
+    width: calc(100%);
     height: 100%;
     display: -webkit-inline-box;
     display: -moz-inline-box;
@@ -824,10 +824,10 @@ h1 {
     position: relative; }
     @media only screen and (max-width: 1000px) {
       .site-search__searchfield {
-        width: calc(100% - 200px); } }
+        width: calc(100%); } }
     @media only screen and (max-width: 460px) {
       .site-search__searchfield {
-        width: calc(100% - 120px); } }
+        width: calc(100%); } }
     .site-search__searchfield input {
       margin-top: auto;
       margin-bottom: auto;
@@ -926,7 +926,7 @@ h1 {
 
 .hero-area {
   width: 100%;
-  height: calc(100% - 140px);
+  height: calc(100% - 240px);
   min-height: 300px;
   background-color: #0b1f33;
   position: relative; }
@@ -1592,7 +1592,7 @@ p.ticket-price {
 
 
 
-.monthselect, .regionselect {
+.monthselect, .regionselect, .tagselect, .yearselect {
   background-color: none;
   padding: 15px 15px;
   transition: all 0.2s ease-in;
@@ -1602,14 +1602,14 @@ p.ticket-price {
   font-size: 1rem;
   line-height: 4rem;
 }
-.monthselect:hover, .regionselect:hover {
+.monthselect:hover, .regionselect:hover, .tagselect:hover, .yearselect:hover {
   background-color: rgba(51, 54, 66, 0.5);
   color: red;
 }
-input[type="radio"].month, input[type="radio"].region {
+input[type="radio"].month, input[type="radio"].region, input[type="checkbox"].tag, input[type="radio"].year {
 display: none;
 }
-input[type="radio"]:checked + label, input[type="radio"]:checked + label {
+input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
   background-color: red;
   color: white;
 }
@@ -1629,3 +1629,13 @@ input[type="radio"]:checked + label, input[type="radio"]:checked + label {
   background-color: white;
   color: red;
 }
+
+.event-list { min-height: 300px; }
+
+
+
+
+
+
+
+

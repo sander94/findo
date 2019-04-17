@@ -31,6 +31,7 @@
 
   <form action="" method="get">
     <div class="event-list">
+    
 
 
 
@@ -39,12 +40,14 @@
 
 $(document).ready(function(){
     $('input:radio[name="month"]').change(function() {
-        // alert
-        $('#currentMonth').html($(this).attr('id'));;
+        $('#currentMonth').html($(this).attr('value')+ '/');;
+    });
+
+    $('input:radio[name="year"]').change(function() {
+        $('#currentYear').html($(this).attr('id'));
     });
 
         $('input:radio[name="region"]').change(function() {
-        // alert
         $('#currentRegion').html($(this).attr('id'));;
     });
 });
@@ -52,56 +55,74 @@ $(document).ready(function(){
 </script>
 
 
-    <div class="event-list__filter">
+  <div class="event-list__filter">
+
+
+  <!-- TOGGLE WRAP -->
         <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
-          <div class="selectbox__label js-slide-toggle" id="currentMonth">Vali kuu</div>
+          <div class="selectbox__label js-slide-toggle"><span id="currentMonth">{{ $currentMonth }}/</span><span id="currentYear">{{ $currentYear }}</span></div>
           <div class="selectbox__content js-toggled-item js-multiselect">
-            <input type="radio" name="month" class="month" value="01" id="Jaanuar"><label class="monthselect" for="Jaanuar"> Jaanuar</label>
-            <input type="radio" name="month" class="month" value="02" id="Veebruar"><label class="monthselect" for="Veebruar"> Veebruar</label>
-            <input type="radio" name="month" class="month" value="03" id="Märts"><label class="monthselect" for="Märts"> Märts</label>
-            <input type="radio" name="month" class="month" value="04" id="Aprill"><label class="monthselect" for="Aprill"> Aprill</label>
-            <input type="radio" name="month" class="month" value="05" id="Mai"><label class="monthselect" for="Mai"> Mai</label>
-            <input type="radio" name="month" class="month" value="06" id="Juuni"><label class="monthselect" for="Juuni"> Juuni</label>
-            <input type="radio" name="month" class="month" value="07" id="Juuli"><label class="monthselect" for="Juuli"> Juuli</label>
-            <input type="radio" name="month" class="month" value="08" id="August"><label class="monthselect" for="August"> August</label>
-            <input type="radio" name="month" class="month" value="09" id="September"><label class="monthselect" for="September"> September</label>
-            <input type="radio" name="month" class="month" value="10" id="Oktoober"><label class="monthselect" for="Oktoober"> Oktoober</label>
-            <input type="radio" name="month" class="month" value="11" id="November"><label class="monthselect" for="November"> November</label>
-            <input type="radio" name="month" class="month" value="12" id="Detsember"><label class="monthselect" for="Detsember"> Detsember</label>
+            <div>
+                <input type="radio" name="year" class="year" value="2019" id="2019" 
+                <?php if($currentYear == 2019) { echo "checked"; }  ?>>
+                <label class="yearselect" for="2019">2019</label>
 
+                <input type="radio" name="year" class="year" value="2020" id="2020" <?php if($currentYear == 2020) { echo "checked"; }  ?>>
+                <label class="yearselect" for="2020">2020</label>
+            </div>
 
-
+            <div>
+            @foreach($months as $month)
+              <input type="radio" name="month" class="month" value="{{ $month->number }}" id="{{ $month->month }}" 
+              <?php if($currentMonth == $month->number) { echo "checked"; } ?> >
+                           <label class="monthselect" for="{{ $month->month }}">{{ $month->month }}</label>
+            @endforeach
+            </div>
 
 
           </div>
         </div>
+<!-- TOGGLE WRAP END -->
 
 
 <!-- TOGGLE WRAP -->
         <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
-                  <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
           <div class="selectbox__label js-slide-toggle" id="currentRegion"> {{ $currentRegion }} </div>
-          <div class="selectbox__content js-toggled-item js-multiselect">
+             <div class="selectbox__content js-toggled-item js-multiselect">
 
-          @foreach($regionals as $key)
-           <input type="radio" name="region" class="region" value="{{ $key->id }}" id="{{ $key->region }}" <?php if(isset($_GET['region'])) { if($_GET['region'] == $key->id ) { echo "checked"; } } ?> >
-           <label class="regionselect" for="{{ $key->region }}"> {{ $key->region }} </label>
-          @endforeach
-
-   
-
-
-
-
-          </div>
-        </div>
-
+                  @foreach($regionals as $key)
+                 
+                   <input type="radio" name="region" class="region" value="{{ $key->id }}" id="{{ $key->region }}" <?php if(isset($_GET['region'])) { if($_GET['region'] == $key->id ) { echo "checked"; } } ?> >
+                   <label class="regionselect" for="{{ $key->region }}"> {{ $key->region }} </label>
+                 
+                  @endforeach
+      
+              </div>
         </div>
 <!-- TOGGLE WRAP END -->
 
+
+
+<!-- TOGGLE WRAP -->
+  <?php /*      <div class="selectbox selectbox--default selectbox--large js-toggle-wrap">
+          <div class="selectbox__label js-slide-toggle" id="currentTags"> Märksõnad </div>
+             <div class="selectbox__content js-toggled-item js-multiselect">
+                  @foreach($tags as $tag)
+                   <input type="checkbox" name="tag[]" class="tag" value="{{ $tag->id }}" id="{{ $tag->tag }}" <?php if(isset($_GET['tag'])) { if(in_array($tag->id, $_GET['tag'] )) { echo "checked"; } } ?> >
+                   <label class="tagselect" for="{{ $tag->tag }}"> {{ $tag->tag }} </label>
+                  @endforeach
+              </div>
+        </div>
+      */ ?>
+<!-- TOGGLE WRAP END -->
+
+
+
+
+
       <button class="find-btn">Leia</button>
 
-      </div>
+  </div>
 
 
 

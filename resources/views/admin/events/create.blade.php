@@ -13,6 +13,29 @@
                 	
                 	<form action="{{ route('events.store') }}" method=post autocomplete="off" enctype="multipart/form-data">
                 		@csrf
+
+
+                        <div class="form-group row" style="border: 1px solid #dadada; height: 200px; padding-top: 80px; background-color: #d25d25;">
+                            <label for="slider_image" class="col-md-4 col-form-label text-md-right">Slaideri pilt</label>
+                            <div class="col-md-6">
+                                <input id="slider_image" type="file" class="form-control" name="slider_image" style="border: 0; background: none;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Promoüritus?</label>
+                            <div class="col-md-6">
+                                <input type="checkbox" value="1" name="is_promoted">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Avalikusta kohe?</label>
+                            <div class="col-md-6">
+                                <input type="checkbox" value="1" name="is_active">
+                            </div>
+                        </div>
+
                 	  	<div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Ürituse nimi</label>
                             <div class="col-md-6">
@@ -52,6 +75,25 @@
                             </div>
                         </div>
 
+                        <div class="form-group row">
+                            <label for="googleInput" class="col-md-4 col-form-label text-md-right">Google Maps - vali täpne asukoht rippmenüüst</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="google_address" placeholder="Google aadress" class="form-control" id="googleInput">
+                                </div>
+                        </div>
+
+                        <script>
+                        function initialize() {
+
+                        var input = document.getElementById('googleInput');
+                        var autocomplete = new google.maps.places.Autocomplete(input);
+                        }
+
+                        google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&language=et&region=ee&key=AIzaSyCFGE2zSlkuGfx9Vg_71R2BQYP54I0OuDM&sensor=false&callback=initialize" async defer>
+                        </script>
+
                 	  	<div class="form-group row">
                             <label for="ticket_price" class="col-md-4 col-form-label text-md-right">Pileti hind</label>
                             <div class="col-md-6">
@@ -62,14 +104,14 @@
                 	  	<div class="form-group row">
                             <label for="additional_info" class="col-md-4 col-form-label text-md-right">Sissepääsu ja piletite lisainfo</label>
                             <div class="col-md-6">
-                                <textarea id="additional_info" class="form-control" name="additional_info"></textarea>
+                                <textarea id="additional_info" class="form-control" name="additional_info" style="height: 400px;"></textarea>
                             </div>
                         </div>
 
                 	  	<div class="form-group row">
                             <label for="organizator" class="col-md-4 col-form-label text-md-right">Organisaator</label>
                             <div class="col-md-6">
-                                <input id="organizator" type="text" class="form-control" name="organizator">
+                                <textarea id="organizator" class="form-control" name="organizator"></textarea>
                             </div>
                         </div>
 

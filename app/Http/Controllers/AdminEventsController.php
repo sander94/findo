@@ -17,7 +17,7 @@ class AdminEventsController extends Controller
      */
     public function index()
     {
-        $events = Events::all()->where('is_promoted', '0');
+        $events = Events::orderBy('is_promoted', 'DESC')->orderBy('date', 'ASC')->get();
         return view('admin.events.index', compact('events', $events));
     }
 

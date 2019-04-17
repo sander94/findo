@@ -15,9 +15,10 @@
 Auth::routes();
 
 Route::get('/', 'MainController@index')->name('frontpage');
+Route::post('/', 'MainController@index')->name('frontpage');
 Route::get('/event/{id}', 'MainController@showEvent')->name('event');
 
 Route::get('/admin', 'HomeController@index')->name('admin');
 
+
 Route::resource('/admin/events', 'AdminEventsController');
-Route::resource('/admin/promo-events', 'AdminPromoEventsController');

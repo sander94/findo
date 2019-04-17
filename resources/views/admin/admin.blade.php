@@ -15,8 +15,6 @@
                     @endif
 
                     <a href="/admin/events/">Üritused</a><br>
-                    <a href="/admin/promo-events/">Promoüritused</a><br>
-                    <a href="/admin/activities/">Tegevused</a>
                 </div>
             </div>
         </div>

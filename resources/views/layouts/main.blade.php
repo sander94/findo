@@ -6,19 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+    <link rel="stylesheet" href="https://github.com/KidSysco/jquery-ui-month-picker/blob/master/src/MonthPicker.css">
+    <script src="https://kidsysco.github.io/jquery-ui-month-picker/MonthPicker.min.js"> </script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300,300i,500,500i" rel="stylesheet">
   </head>
   <body>
     <div class="loading-screen">
       <div class="loader-icon"></div>
     </div>
-    <div class="site-search js-site-search">
+ <!--   <div class="site-search js-site-search">
 
       <div class="site-search__searchfield">
         <input type="text" placeholder="Otsi..."/><a href="search-results.html">
           <button value="Search"></button></a>
       </div>
-    </div>
+    </div> -->
 @yield('content')
     <div class="footer">
       <div class="inner-footer">
@@ -26,7 +32,6 @@
         <div class="footer--right-column"> 
           <ul>
             <li><a href="#">Korraldajale</a></li>
-            <li><a href="#">Link 2</a></li>
           </ul>
         </div>
       </div>

@@ -14,6 +14,30 @@
                 	<form action="{{ route('events.update', $event->id) }}" method=post autocomplete="off" enctype="multipart/form-data">
                 		@csrf
                         @method('PUT')
+
+                        <div class="form-group row" style="border: 1px solid #dadada; height: 200px; padding-top: 80px; background-image: url({{ asset('images/events/sliders/'.$event->slider_image.'') }}); background-size: cover;">
+                            <label for="slider_image" class="col-md-4 col-form-label text-md-right">Slaideri pilt</label>
+                            <div class="col-md-6">
+                                <input id="slider_image" type="file" class="form-control" name="slider_image" style="border: 0; background: none;">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Promoüritus slaideriga?</label>
+                            <div class="col-md-6">
+                                <input type="hidden" name="is_promoted" value="0">
+                                <input type="checkbox" name="is_promoted" value="1" @if($event->is_promoted == "1") checked @endif>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="title" class="col-md-4 col-form-label text-md-right">Avalik?</label>
+                            <div class="col-md-6">
+                                <input type="hidden" name="is_active" value="0">
+                                <input type="checkbox" name="is_active" value="1" @if($event->is_active == "1") checked @endif>
+                            </div>
+                        </div>
+                        
                 	  	<div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Ürituse nimi</label>
                             <div class="col-md-6">
@@ -24,7 +48,7 @@
                 	  	<div class="form-group row">
                             <label for="description" class="col-md-4 col-form-label text-md-right">Kirjeldus</label>
                             <div class="col-md-6">
-                                <textarea id="description" class="form-control" name="description">{{ $event->description }}</textarea>
+                                <textarea id="description" class="form-control" name="description" style="height: 400px;">{{ $event->description }}</textarea>
                             </div>
                         </div>
 
@@ -53,6 +77,62 @@
                             </div>
                         </div>
 
+
+
+                        <div class="form-group row">
+                            <label for="googleInput" class="col-md-4 col-form-label text-md-right">Google Maps - vali täpne asukoht rippmenüüst</label>
+                                <div class="col-md-6">
+                                    <input type="text" name="google_address" class="form-control" id="googleInput" placeholder="Google aadress" value="{{ $event->google_address }} ">
+                                 </div>
+
+                            <script>
+                              var geocoder;
+                              var map;
+                              var address = "{{ $event->google_address }}";
+
+
+
+                              function initMap() {
+                                var map = new google.maps.Map(document.getElementById('map'), {
+                                  zoom: 16,
+                                  center: {lat: -34.397, lng: 150.644}
+                                });
+                                geocoder = new google.maps.Geocoder();
+                                codeAddress(geocoder, map);
+                                var input = document.getElementById('googleInput');
+                                var autocomplete = new google.maps.places.Autocomplete(input);
+                              }
+
+                              function codeAddress(geocoder, map) {
+                                geocoder.geocode({'address': address}, function(results, status) {
+                                  if (status === 'OK') {
+                                    map.setCenter(results[0].geometry.location);
+                                    var marker = new google.maps.Marker({
+                                      map: map,
+                                      position: results[0].geometry.location
+                                    });
+                                  } else {
+                                    
+                                  }
+                                });
+                              }
+                            </script>
+
+
+                            <script src="https://maps.googleapis.com/maps/api/js?libraries=places&language=et&region=ee&key=AIzaSyCFGE2zSlkuGfx9Vg_71R2BQYP54I0OuDM&sensor=false&callback=initMap" async defer>
+                            </script>
+
+
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                <div id="map" style="height: 200px;"> </div>
+                            </div>
+                        </div>
+
+
+
                 	  	<div class="form-group row">
                             <label for="ticket_price" class="col-md-4 col-form-label text-md-right">Pileti hind</label>
                             <div class="col-md-6">
@@ -70,7 +150,7 @@
                 	  	<div class="form-group row">
                             <label for="organizator" class="col-md-4 col-form-label text-md-right">Organisaator</label>
                             <div class="col-md-6">
-                                <input id="organizator" type="text" class="form-control" name="organizator" value="{{ $event->organizator }}">
+                                <textarea id="organizator" class="form-control" name="organizator">{{ $event->organizator }}</textarea>
                             </div>
                         </div>
 
@@ -94,7 +174,7 @@
 						<div class="form-group row">
                             <label class="col-md-4 col-form-label text-md-right"></label>
                             <div class="col-md-6">
-                                <button type="submit" class="form-control btn btn-success">Sisesta üritus</button>
+                                <button type="submit" class="form-control btn btn-success">Muuda üritust</button>
                             </div>
                         </div>
 

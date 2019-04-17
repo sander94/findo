@@ -7,7 +7,7 @@ use Intervention\Image\Facades\Image as Image;
 
 class Events extends Model
 {
-    protected $fillable = ['title', 'description', 'image', 'slider_image', 'video', 'additional_info', 'date', 'time', 'location', 'ticket_price', 'google_address', 'organizator', 'is_promoted', 'tags'];
+    protected $fillable = ['title', 'description', 'image', 'slider_image', 'video', 'additional_info', 'date', 'time', 'location', 'ticket_price', 'google_address', 'organizator', 'is_promoted', 'is_active', 'tags'];
 
 
 

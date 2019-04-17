@@ -13,6 +13,8 @@
     <script src="{{ asset('js/app.js') }}"></script>
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -26,7 +28,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/admin') }}">
-                    Findo
+                    Admin
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -76,7 +78,14 @@
 
         <main class="py-4">
             @yield('content')
+
+            <div class="footer" style="width: 100%;">
+                <div style="margin: 0 auto; text-align: center; margin-top: 80px;">
+                 <a href="/" target="_blank"><strong style="color: #d0d0d0;">Findo.ee</strong></a>
+             </div>
+            </div>
         </main>
+
     </div>
 </body>
 </html>
