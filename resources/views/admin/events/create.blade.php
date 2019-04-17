@@ -71,6 +71,21 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="region" class="col-md-4 col-form-label text-md-right">Regioon</label>
+                            <div class="col-md-6">
+                                <select name="region" class="form-control">
+
+                                    @foreach($regions as $region)
+
+                                        <option value="{{ $region->id }}">{{ $region->region }}</option>
+
+                                    @endforeach
+
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
                             <label for="googleInput" class="col-md-4 col-form-label text-md-right">Google Maps - vali täpne asukoht rippmenüüst</label>
                                 <div class="col-md-6">
                                     <input type="text" name="google_address" placeholder="Google aadress" class="form-control" id="googleInput">

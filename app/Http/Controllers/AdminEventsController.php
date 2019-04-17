@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Events;
 use App\OpeningTimes;
+use App\Regions;
 use Intervention\Image\Facades\Image as Image;
 
 
@@ -28,8 +29,9 @@ class AdminEventsController extends Controller
      */
     public function create()
     {
+        $regions = Regions::all();
         $openingtimes = OpeningTimes::all();
-        return view('admin.events.create', compact('openingtimes'));
+        return view('admin.events.create', compact(['openingtimes', 'regions']));
     }
 
     /**
@@ -40,7 +42,6 @@ class AdminEventsController extends Controller
      */
     public function store(Request $request)
     {
-
         Events::create($request->all());
         return redirect()->route('events.index');
     }
@@ -67,7 +68,8 @@ class AdminEventsController extends Controller
     {
         $openingtimes = OpeningTimes::all();
         $event = Events::find($id);
-        return view('admin.events.edit', compact(['event', 'openingtimes']));
+        $regions = Regions::all();
+        return view('admin.events.edit', compact(['event', 'openingtimes', 'regions']));
     }
 
     /**
