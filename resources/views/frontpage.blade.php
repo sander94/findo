@@ -9,7 +9,7 @@
       @foreach($promoevents as $promoevent)
 
        
-        <div class="hero-area__each-content-slide js-hero-slide" style="background-image:url(
+        <div class="hero-area__each-content-slide js-hero-slide @if($counter == '1') js-active-slide @endif "" style="background-image:url(
         {{ asset('images/events/sliders/'.$promoevent->slider_image.'') }} );" id="js-slide-{{ $counter }}">
           <div class="hero-area__outer-content-align">
            <!-- <div class="hero-area__banner-logo"><img src="{{ asset('images/temp/slider/logos/logo-olearys.svg') }}"></div> -->
