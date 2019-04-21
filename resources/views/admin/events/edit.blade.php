@@ -15,12 +15,41 @@
                 		@csrf
                         @method('PUT')
 
-                        <div class="form-group row" style="border: 1px solid #dadada; height: 200px; padding-top: 80px; background-image: url({{ asset('images/events/sliders/'.$event->slider_image.'') }}); background-size: cover;">
-                            <label for="slider_image" class="col-md-4 col-form-label text-md-right">Slaideri pilt</label>
-                            <div class="col-md-6">
-                                <input id="slider_image" type="file" class="form-control" name="slider_image" style="border: 0; background: none;">
+
+
+                        <div class="form-group row">
+                            <div class="col-md-8">
+                                <strong><i class="fas fa-desktop"> </i> Desktopi pilt</strong>
                             </div>
+                            <div class="col-md-4">
+                                <strong><i class="fas fa-mobile-alt"> </i> Mobiili pilt</strong>
+                            </div>
+
                         </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-8" style="border: 0px solid #000; height: 200px;">
+                                <label style="width: 100%; height: 100%;">
+                                <div style="width: 100%; margin: 0 auto; height: 100%; background-image: url({{ asset('images/events/sliders/'.$event->slider_image.'') }}); background-size: cover; background-position-x: center;">
+
+                                <input id="slider_image" type="file" class="form-control" name="slider_image" style="border: 0; background: none;">
+                                </div>
+                                 </label>
+
+                            </div>
+
+
+                            <div class="col-md-4" style="border: 0px solid #000; height: 200px;">
+                                <label style="width: 100%; height: 100%;">
+                                <div style="width: 100%; margin: 0 auto; height: 100%; background-image: url({{ asset('images/events/sliders/'.$event->mobile_slider_image.'') }}); background-size: cover; background-position-x: center;">
+                                 <input id="mobile_slider_image" type="file" class="form-control" name="mobile_slider_image" style="border: 0; background: none;">
+                                </div>
+                               </label>
+                           </div>
+                        </div>
+
+
+
 
                         <div class="form-group row">
                             <label for="title" class="col-md-4 col-form-label text-md-right">Promoüritus slaideriga?</label>

@@ -11,7 +11,7 @@
 
 
     <link rel="stylesheet" href="https://github.com/KidSysco/jquery-ui-month-picker/blob/master/src/MonthPicker.css">
-    <script src="https://kidsysco.github.io/jquery-ui-month-picker/MonthPicker.min.js"> </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700|Roboto:300,300i,500,500i" rel="stylesheet">
   </head>
   <body>

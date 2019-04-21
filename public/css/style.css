@@ -445,7 +445,7 @@ label {
         padding: 10px; } }
     @media only screen and (max-width: 1300px) {
       .selectbox--large .selectbox__content {
-        width: 660px; } }
+        width: 660px; } .details { max-height: 13em; } }
     @media only screen and (max-width: 1000px) {
       .selectbox--large .selectbox__content {
         width: 400px; } }
@@ -726,7 +726,9 @@ html {
   @media only screen and (max-width: 800px) {
     html {
       font-size: 14px;
-      line-height: 24px; } }
+      line-height: 24px; } 
+      .details { max-height: 12em; }
+    }
 
 body {
   background-color: #000;
@@ -1516,7 +1518,7 @@ p.ticket-price {
 .navigate-back {
   position: absolute;
   z-index: 300;
-  top: 80px;
+  top: 0px;
   height: 40px;
   line-height: 40px;
   background-color: #ff0000;
@@ -1643,6 +1645,12 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
 }
 
+#text {
+  overflow: hidden;
+}
 
+#text.toggled { height: 100%; }
 
-
+#read-more {
+  background-color: red;
+}

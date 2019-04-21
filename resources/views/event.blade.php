@@ -1,6 +1,24 @@
 @extends('layouts.main')
 
 @section('content')
+<style>
+ .details + [data-readmore-toggle], .details[data-readmore]{display: block; width: 100%;} .details[data-readmore]{transition: height 200ms;overflow: hidden;}
+
+ a.readmore-btn {
+  width: 100px !important;
+  display: table;
+  margin-top: 20px;
+ }
+
+ a.readmore-btn i {
+  margin-left: 10px;
+ }
+
+ a.readmore-btn {
+  border-bottom: 0;
+ }
+</style>
+
 <a class="navigate-back" href="/"> <span>Tagasi avalehele</span></a>
     <article class="content-area content-area--event-details has-media">
       <div class="event-details__content-block event-details__intro-content">
@@ -13,9 +31,9 @@
           <div class="event-share js-toggle-wrap">
             <div class="event-share__dropdown js-slide-toggle">Jaga
               <ul class="social-share js-toggled-item align-left">
-                <li class="facebook"><a href="#">Facebook</a></li>
-                <li class="twitter"><a href="#">Twitter</a></li>
-                <li class="email"><a href="#">E-mail</a></li>
+                <li class="facebook"><a href="https://facebook.com/sharer/sharer.php?u=https://findo.ee/event/{{ $event->id }}">Facebook</a></li>
+                <li class="twitter"><a href="https://twitter.com/intent/tweet?url=https://findo.ee/event/{{ $event->id }}">Twitter</a></li>
+               <!--  <li class="email"><a href="#">E-mail</a></li> -->
               </ul>
             </div>
           </div>
@@ -27,7 +45,10 @@
             <div class="play-media__btn js-toggle-active"></div><!-- <img src="{{ asset('images/temp/dragons.png') }}"> -->
           </div>
         </div>
-        <p>{!! nl2br($event->description) !!}</p>
+          <div class="details">
+          {!! nl2br($event->description) !!}
+          </div>
+
       </div>
       <div class="event-details__content-block">
         <h3>Hinnainfo</h3>
@@ -89,4 +110,16 @@
     </article>
    
     
+<script src="https://fastcdn.org/Readmore.js/2.1.0/readmore.min.js"></script>
+<script>
+
+$('.details').readmore({
+  speed: 1000,
+  collapsedHeight: 300,
+  moreLink: '<a href="#" class="readmore-btn">Loe lisa <i class="fas fa-chevron-down"> </i></a>',
+lessLink: '<a href="#" class="readmore-btn">Sulge <i class="fas fa-chevron-up"> </i></a>'
+});
+</script>
+
+
 @endsection

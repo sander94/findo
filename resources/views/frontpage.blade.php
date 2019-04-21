@@ -4,8 +4,31 @@
     <div class="hero-area js-hero-slides">
      <div class="hero-area__content-slides js-hero-height"><a class="hero-slider-arrow hero-slider-arrow--left js-change-hero-slide js-left" href="#"></a><a class="hero-slider-arrow hero-slider-arrow--right js-change-hero-slide js-right" href="#"></a>
        
-     <?php $counter = 1;  ?>
-      
+     <?php 
+        $counter = 1;  
+        $counter2 = 1;
+     ?>
+    
+<style>
+@media screen and (min-width: 0px) and (max-width: 700px) {
+<?php foreach($promoevents as $promoevent) {  
+echo "
+#js-slide-".$counter2." {
+
+  ";
+  if(!empty($promoevent->mobile_slider_image)) { 
+    echo "background-image: url('images/events/sliders/".$promoevent->mobile_slider_image."') !important;
+  "; }
+
+  echo "
+}
+";
+$counter2++;
+} ?>
+}
+</style>
+
+
       @foreach($promoevents as $promoevent)
 
        
@@ -142,8 +165,8 @@ $(document).ready(function(){
             <div class="event-share__dropdown js-slide-toggle">
               <ul class="social-share js-toggled-item align-right">
                 <li class="facebook"><a href="https://facebook.com/sharer/sharer.php?u=https://findo.ee/event/{{ $event->id }}">Facebook</a></li>
-                <li class="twitter"><a href="#">Twitter</a></li>
-                <li class="email"><a href="#">E-mail</a></li>
+                <li class="twitter"><a href="https://twitter.com/intent/tweet?url=https://findo.ee/event/{{ $event->id }}">Twitter</a></li>
+              <!--   <li class="email"><a href="#">E-mail</a></li> -->
               </ul>
             </div>
           </div>
