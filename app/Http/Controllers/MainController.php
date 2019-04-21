@@ -38,7 +38,7 @@ $currentYear = date('Y');
 
 
 
-        $events = Events::where('is_active', 1);
+        $events = Events::where('is_active', 1)->where('date', '>=', date('Y-m-d'));
         if ($request->has('month')) {
             $events->whereMonth('date', $request->month);
         }

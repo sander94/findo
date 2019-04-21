@@ -1516,7 +1516,7 @@ p.ticket-price {
   line-height: 3rem; }
 
 .navigate-back {
-  position: absolute;
+  position: fixed;
   z-index: 300;
   top: 0px;
   height: 40px;
@@ -1617,15 +1617,15 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 .find-btn {
-  background-color: red;
-  color: #FFF;
-  padding: 10px 15px;
-  transition: all 0.2s ease-in;
-  border-radius: 2px;
-  margin-right: 5px;
-  margin-bottom: 9px;
-  margin-top: 5px;
-  font-size: 1rem;
+  background-color: black;
+    color: #FFF;
+    padding: 10px 15px;
+    transition: all 0.2s ease-in;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 9px;
+    font-size: 1rem;
+    border: 2px solid #585858;
 }
 
 .find-btn:hover {
@@ -1637,6 +1637,9 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 
 
 
+
+
+
 @media screen and (max-width: 400px) {
 
 .event-list__events {
@@ -1644,6 +1647,8 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 }
+
+
 
 #text {
   overflow: hidden;
