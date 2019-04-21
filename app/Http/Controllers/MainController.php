@@ -69,14 +69,15 @@ $currentYear = date('Y');
 
         $promoevents = Events::all()->where('is_promoted', '1');
        
-        return view('frontpage', compact('events', 'promoevents', 'regionals', 'currentRegion', 'months', 'currentMonth', 'currentYear', 'tags'));
+        return view('frontpage', compact('events', 'promoevents', 'regionals', 'currentRegion', 'months', 'currentMonth', 'currentYear', 'tags'))->with('og_image', '')->with('og_title', 'Findo.ee')->with('og_description', 'Findost leiad ürituse!');
     }
 
 
    	public function showEvent($id)
     {
     	$event = Events::find($id);
-        return view('event', compact('event'));
+        $ogImage = "https://findo.ee/images/events/thumb/".$event->image;
+        return view('event', compact('event'))->with('og_image', $ogImage)->with('og_title', $event->title)->with('og_description', $event->description );
     }
 
 }

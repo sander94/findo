@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
+    <meta property="og:image" content="{{ $og_image }}" />
+    <meta property="og:title" content="{{ $og_title }}" />
+    <meta property="og:description" content="{{ $og_description }}" />
 
     <link rel="stylesheet" href="https://github.com/KidSysco/jquery-ui-month-picker/blob/master/src/MonthPicker.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
