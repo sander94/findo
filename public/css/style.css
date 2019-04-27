@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 40px auto;
-    background-image: url(/images/icons/loading.svg);
+    background-image: url(https://findo.ee/public/images/icons/loading.svg);
     animation: rotate 1s infinite; }
 
 html, body, div, span, applet, object, iframe,
@@ -210,22 +210,22 @@ button {
       background-color: #d00000;
       color: #000; }
   .btn.dark.up {
-    background-image: url(/images/icons/arrows/icon_arrow_up_light.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_up_light.svg); }
   .btn.dark.right {
-    background-image: url(/images/icons/arrows/icon_arrow_right_light.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_right_light.svg); }
   .btn.dark.down {
-    background-image: url(/images/icons/arrows/icon_arrow_down_light.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_down_light.svg); }
   .btn.dark.left {
-    background-image: url(/images/icons/arrows/icon_arrow_left_light.svg);
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_left_light.svg);
     background-position: 16px center; }
   .btn.light.up {
-    background-image: url(/images/icons/arrows/icon_arrow_up_dark.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_up_dark.svg); }
   .btn.light.right {
-    background-image: url(/images/icons/arrows/icon_arrow_right_dark.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_right_dark.svg); }
   .btn.light.down {
-    background-image: url(/images/icons/arrows/icon_arrow_down_dark.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_down_dark.svg); }
   .btn.light.left {
-    background-image: url(/images/icons/arrows/icon_arrow_left_dark.svg);
+    background-image: url(https://findo.ee/public/images/icons/arrows/icon_arrow_left_dark.svg);
     background-position: 16px center; }
 
 a {
@@ -400,7 +400,7 @@ label {
     background-repeat: no-repeat;
     background-position: right 20px center;
     background-size: 10px auto;
-    background-image: url(/images/icons/arrows/min-down-grey.svg); }
+    background-image: url(https://findo.ee/public/images/icons/arrows/min-down-grey.svg); }
     .selectbox--default .selectbox__label {
       padding-top: 10px;
       padding-right: 30px;
@@ -417,7 +417,7 @@ label {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 10px auto;
-        background-image: url(/images/icons/arrows/light/down-min.svg);
+        background-image: url(https://findo.ee/public/images/icons/arrows/light/down-min.svg);
         opacity: 0.5;
         -webkit-transition: opacity 0.4s;
         -moz-transition: opacity 0.4s;
@@ -469,7 +469,7 @@ label {
     background-repeat: no-repeat;
     background-position: 12px center;
     background-size: 30px auto;
-    background-image: url(/images/icons/location.svg);
+    background-image: url(https://findo.ee/public/images/icons/location.svg);
     -webkit-border-radius: 10px 0 0 10px;
     border-radius: 10px 0 0 10px;
     display: -webkit-box;
@@ -558,7 +558,7 @@ label {
 
 .each_checkbox input[type=checkbox]:checked + label:before {
   background-color: #e1e6eb;
-  background-image: url(/images/icons/icon_checkmark-grey.svg);
+  background-image: url(https://findo.ee/public/images/icons/icon_checkmark-grey.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 18px 18px; }
@@ -576,10 +576,10 @@ label {
     font-weight: 700; }
   .messages__success {
     border: 1px solid #1c8400;
-    background-image: url(/images/icons/success.svg); }
+    background-image: url(https://findo.ee/public/images/icons/success.svg); }
   .messages__error {
     border: 1px solid #d80000;
-    background-image: url(/images/icons/error.svg);
+    background-image: url(https://findo.ee/public/images/icons/error.svg);
     background-size: 30px auto; }
 
 .menu_line {
@@ -658,7 +658,7 @@ label {
     .content-slider .arrow-right span,
     .hero-area__slider .arrow-right span {
       background-position: right 10px center;
-      background-image: url(/images/icons/arrows/light/right-min.svg); }
+      background-image: url(https://findo.ee/public/images/icons/arrows/light/right-min.svg); }
   .content-slider .arrow-left,
   .hero-area__slider .arrow-left {
     left: 0;
@@ -670,7 +670,7 @@ label {
     .content-slider .arrow-left span,
     .hero-area__slider .arrow-left span {
       background-position: 10px center;
-      background-image: url(/images/icons/arrows/light/left-min.svg); }
+      background-image: url(https://findo.ee/public/images/icons/arrows/light/left-min.svg); }
   .content-slider .sliding-overflow,
   .hero-area__slider .sliding-overflow {
     padding-top: 15px;
@@ -756,7 +756,7 @@ body {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 40px auto;
-    background-image: url(/images/icons/loading.svg);
+    background-image: url(https://findo.ee/public/images/icons/loading.svg);
     animation: rotate 1s infinite; }
 
 h1 {
@@ -849,7 +849,7 @@ h1 {
       background-repeat: no-repeat;
       background-position: center center;
       background-size: 28px auto;
-      background-image: url(/images/icons/search.svg);
+      background-image: url(https://findo.ee/public/images/icons/search.svg);
       opacity: 0.5;
       -webkit-transition: opacity 0.4s;
       -moz-transition: opacity 0.4s;
@@ -960,11 +960,11 @@ h1 {
         bottom: 28px; } }
     .hero-area .hero-slider-arrow--left {
       left: 20px;
-      background-image: url(/images/icons/arrows/light/left-min.svg);
+      background-image: url(https://findo.ee/public/images/icons/arrows/light/left-min.svg);
       display: none; }
     .hero-area .hero-slider-arrow--right {
       right: 20px;
-      background-image: url(/images/icons/arrows/light/right-min.svg); }
+      background-image: url(https://findo.ee/public/images/icons/arrows/light/right-min.svg); }
   .hero-area__each-content-slide {
     box-sizing: border-box;
     position: absolute;
@@ -1183,7 +1183,7 @@ h1 {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 14px auto;
-    background-image: url(/images/icons/share-light-grey.svg);
+    background-image: url(https://findo.ee/public/images/icons/share-light-grey.svg);
     cursor: pointer;
     position: relative;
     font-size: 0.8rem;
@@ -1192,7 +1192,7 @@ h1 {
       background-color: #ff0000; }
     .event-share__dropdown.js-active {
       background-color: rgba(11, 31, 51, 0.98);
-      background-image: url(/images/icons/x-grey.svg); }
+      background-image: url(https://findo.ee/public/images/icons/x-grey.svg); }
   .event-share__dropdown ul {
     position: absolute;
     z-index: 2;
@@ -1223,13 +1223,13 @@ h1 {
     .event-share .social-share a:hover {
       color: #ff0000; }
   .event-share .social-share .facebook a {
-    background-image: url(/images/icons/social/colored/fb.svg); }
+    background-image: url(https://findo.ee/public/images/icons/social/colored/fb.svg); }
   .event-share .social-share .twitter a {
     background-size: auto 14px;
-    background-image: url(/images/icons/social/colored/twitter.svg); }
+    background-image: url(https://findo.ee/public/images/icons/social/colored/twitter.svg); }
   .event-share .social-share .email a {
     background-size: auto 12px;
-    background-image: url(/images/icons/mail-grey.svg); }
+    background-image: url(https://findo.ee/public/images/icons/mail-grey.svg); }
 
 .event-list__filter {
   border-bottom: 1px solid rgba(51, 54, 66, 0.8); }
@@ -1333,11 +1333,11 @@ h1 {
           padding-bottom: 0;
           line-height: 1.6rem; } }
     .content-area--event-details .time {
-      background-image: url(/images/icons/calendar-light-grey.svg); }
+      background-image: url(https://findo.ee/public/images/icons/calendar-light-grey.svg); }
     .content-area--event-details .location {
       background-size: auto 24px;
       background-position: 2px center;
-      background-image: url(/images/icons/location-light-grey.svg); }
+      background-image: url(https://findo.ee/public/images/icons/location-light-grey.svg); }
       @media only screen and (max-width: 600px) {
         .content-area--event-details .location {
           background-size: auto 20px; } }
@@ -1381,7 +1381,7 @@ h1 {
       -ms-transition: background-size 0.3s, width 0.2s, height 0.2s;
       transition: background-size 0.3s, width 0.2s, height 0.2s;
       background-size: 30px auto;
-      background-image: url(/images/icons/play.svg); }
+      background-image: url(https://findo.ee/public/images/icons/play.svg); }
       .content-area .play-media__btn:hover {
         width: 160px;
         height: 160px;
@@ -1392,7 +1392,7 @@ h1 {
           height: 100px; } }
       .content-area .play-media__btn.js-active {
         background-size: auto 30px;
-        background-image: url(/images/icons/pause.svg); }
+        background-image: url(https://findo.ee/public/images/icons/pause.svg); }
         .content-area .play-media__btn.js-active:hover {
           background-size: auto 40px; }
     .content-area .play-media img {
@@ -1525,7 +1525,7 @@ p.ticket-price {
   background-repeat: no-repeat;
   background-position: center right 20px;
   background-size: auto 20px;
-  background-image: url(/images/icons/arrows/light/left-min.svg);
+  background-image: url(https://findo.ee/public/images/icons/arrows/light/left-min.svg);
   color: #ffffff;
   padding-left: 20px;
   padding-right: 60px;
@@ -1617,7 +1617,7 @@ input[type="radio"]:checked + label, input[type="checkbox"]:checked + label {
 }
 
 .find-btn {
-  background-color: black;
+	background-color: black;
     color: #FFF;
     padding: 10px 15px;
     transition: all 0.2s ease-in;
