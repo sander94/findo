@@ -114,9 +114,10 @@ $(document).ready(function(){
              <div class="selectbox__content js-toggled-item js-multiselect">
 
                   @foreach($regionals as $key)
-                 
-                   <input type="radio" name="region" class="region" value="{{ $key->id }}" id="{{ $key->region }}" <?php if(isset($_GET['region'])) { if($_GET['region'] == $key->id ) { echo "checked"; } } ?> >
-                   <label class="regionselect" for="{{ $key->region }}"> {{ $key->region }} </label>
+
+                   <input type="radio" name="region" class="region" value="{{ $key->id }}" id="{{ $key->region }}"
+                   @if($region == $key->id) checked @endif >
+                   <label class="regionselect" for="{{ $key->region }}"> {{ $key->region }} </label>
                  
                   @endforeach
       

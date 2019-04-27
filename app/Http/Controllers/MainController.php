@@ -18,7 +18,7 @@ if(!empty($request->region)) {
 $currentRegion = Regions::where('id', $request->region)->first();
 $currentRegion = $currentRegion->region;
 }
-else { $currentRegion = "Asukoht"; }
+else { $currentRegion = "Tallinn"; $request->region = 1; }
 
 
 if(!empty($request->month)) {
@@ -53,7 +53,7 @@ $currentYear = date('Y');
         }
         if ($request->has('region')) {
             $events->where('region', $request->region);
-        }
+        } else { $events->where('region', 1); }
         if ($request->has('tag')) {
            
         }
@@ -68,8 +68,8 @@ $currentYear = date('Y');
 
 
         $promoevents = Events::all()->where('is_promoted', '1');
-       
-        return view('frontpage', compact('events', 'promoevents', 'regionals', 'currentRegion', 'months', 'currentMonth', 'currentYear', 'tags'))->with('og_image', '')->with('og_title', 'Findo.ee')->with('og_description', 'Findost leiad ürituse!');
+      
+       return view('frontpage', compact('events', 'promoevents', 'regionals', 'currentRegion', 'months', 'currentMonth', 'currentYear', 'tags'))->with('region', $request->region)->with('og_image', '')->with('og_title', 'Findo.ee')->with('og_description', 'Findost leiad ürituse!');
     }
 
 
