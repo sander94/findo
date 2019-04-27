@@ -188,7 +188,7 @@
                 	  	<div class="form-group row">
                             <label for="additional_info" class="col-md-4 col-form-label text-md-right">Sissepääsu ja piletite lisainfo</label>
                             <div class="col-md-6">
-                                <textarea id="additional_info" class="form-control" name="additional_info">{{ $event->additional_info }}</textarea>
+                                <textarea id="additional_info" class="form-control" name="additional_info" style="height: 400px;">{{ $event->additional_info }}</textarea>
                             </div>
                         </div>
 
